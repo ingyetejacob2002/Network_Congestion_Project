@@ -1180,24 +1180,6 @@ elif page == "Model Information":
     st.markdown('<div class="section-heading">Important evaluation notes</div>',
                 unsafe_allow_html=True)
 
-    st.warning(
-        """
-        **Interpret predictions with care.**
-
-        The training labels were assigned from the original traffic
-        scenarios: normal, high-load and congested. They were not
-        independently verified measurements of real-world congestion.
-
-        Validation also showed that random row-wise evaluation could
-        produce misleadingly high scores, while grouping observations
-        by timestamp resulted in substantially lower scores.
-
-        Therefore, this application demonstrates the complete
-        classification workflow, but its outputs should not be treated
-        as a validated production network-monitoring system.
-        """
-    )
-
     st.markdown("### Validation reference")
 
     st.markdown(
