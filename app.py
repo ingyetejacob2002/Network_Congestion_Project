@@ -995,6 +995,7 @@ elif page == "Batch Prediction":
                 "🚀 Run Batch Prediction",
                 use_container_width=True,
             ):
+                st.balloons()
                 with st.spinner("Analyzing traffic records..."):
                     batch_results, _ = predict_traffic(uploaded_df)
 
