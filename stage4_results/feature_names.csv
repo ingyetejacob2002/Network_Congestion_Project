@@ -1,0 +1,4 @@
+feature_name,training_mean_before_scaling,training_standard_deviation_before_scaling
+log_packet_count,1.8719176554630483,2.322388842462813
+log_byte_count,6.0760564285050185,3.4652335444253253
+duration_total_sec,65.34558782894737,35.95273551910563

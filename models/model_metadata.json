@@ -1,0 +1,19 @@
+{
+  "features": [
+    "packet_count",
+    "byte_count",
+    "duration_total_sec",
+    "log_packet_count",
+    "log_byte_count",
+    "packet_rate",
+    "byte_rate",
+    "bytes_per_packet"
+  ],
+  "classes": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "training_rows": 3840,
+  "label_warning": "Labels are scenario-derived. Predictions are not independently validated real-world congestion measurements."
+}

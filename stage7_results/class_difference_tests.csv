@@ -1,0 +1,4 @@
+feature,kruskal_statistic,p_value,training_class_means_differ
+log_packet_count,3.3816443269390826,0.1843678811270994,False
+log_byte_count,3.414686760932925,0.18134692302198346,False
+duration_total_sec,20.620256204579462,3.32941749638498e-05,True

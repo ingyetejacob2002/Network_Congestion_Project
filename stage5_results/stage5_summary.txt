@@ -1,0 +1,20 @@
+STAGE 5: BASELINE MODEL TRAINING SUMMARY
+============================================================
+Training records: 3040
+Testing records: 800
+Features: log_packet_count, log_byte_count, duration_total_sec
+Models evaluated: 5
+
+MODEL PERFORMANCE:
+Support Vector Machine: Accuracy=0.3287, Macro-F1=0.3278, Weighted-F1=0.3280
+Logistic Regression: Accuracy=0.3300, Macro-F1=0.3142, Weighted-F1=0.3165
+Decision Tree: Accuracy=0.3800, Macro-F1=0.2431, Weighted-F1=0.2502
+Random Forest: Accuracy=0.1600, Macro-F1=0.1477, Weighted-F1=0.1496
+K-Nearest Neighbors: Accuracy=0.1288, Macro-F1=0.1156, Weighted-F1=0.1176
+
+Highest observed macro-F1 model: Support Vector Machine
+Highest observed macro-F1: 0.3278
+
+IMPORTANT LIMITATION:
+The highest-scoring model is the best observed baseline on the current test set, not necessarily the best model for real-world deployment. Labels were assigned from scenario filenames, and independent congestion ground truth has not been established.
+Use the results as an initial comparison. Before making strong claims, investigate scenario separation, duplicate feature rows, and generalisation to independent traffic scenarios.

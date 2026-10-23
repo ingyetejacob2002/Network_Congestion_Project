@@ -1,0 +1,129 @@
+
+======================================================================
+MODEL: Decision Tree
+======================================================================
+TRAINING CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.3835    0.9889    0.5527      1080
+         Low     0.9841    0.1265    0.2242       980
+      Medium     0.9070    0.1194    0.2110       980
+
+    accuracy                         0.4306      3040
+   macro avg     0.7582    0.4116    0.3293      3040
+weighted avg     0.7459    0.4306    0.3366      3040
+
+TEST CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.3594    0.9857    0.5267       280
+         Low     1.0000    0.0692    0.1295       260
+      Medium     0.7143    0.0385    0.0730       260
+
+    accuracy                         0.3800       800
+   macro avg     0.6912    0.3645    0.2431       800
+weighted avg     0.6829    0.3800    0.2502       800
+
+
+======================================================================
+MODEL: Random Forest
+======================================================================
+TRAINING CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     1.0000    0.9991    0.9995      1080
+         Low     0.9990    1.0000    0.9995       980
+      Medium     0.9990    0.9990    0.9990       980
+
+    accuracy                         0.9993      3040
+   macro avg     0.9993    0.9994    0.9993      3040
+weighted avg     0.9993    0.9993    0.9993      3040
+
+TEST CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.1866    0.2786    0.2235       280
+         Low     0.1304    0.1154    0.1224       260
+      Medium     0.1316    0.0769    0.0971       260
+
+    accuracy                         0.1600       800
+   macro avg     0.1495    0.1570    0.1477       800
+weighted avg     0.1505    0.1600    0.1496       800
+
+
+======================================================================
+MODEL: Support Vector Machine
+======================================================================
+TRAINING CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.4604    0.3444    0.3941      1080
+         Low     0.3729    0.5959    0.4588       980
+      Medium     0.3874    0.2633    0.3135       980
+
+    accuracy                         0.3993      3040
+   macro avg     0.4069    0.4012    0.3888      3040
+weighted avg     0.4087    0.3993    0.3889      3040
+
+TEST CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.3112    0.3679    0.3372       280
+         Low     0.3364    0.2846    0.3083       260
+      Medium     0.3454    0.3308    0.3379       260
+
+    accuracy                         0.3287       800
+   macro avg     0.3310    0.3277    0.3278       800
+weighted avg     0.3305    0.3287    0.3280       800
+
+
+======================================================================
+MODEL: K-Nearest Neighbors
+======================================================================
+TRAINING CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     1.0000    1.0000    1.0000      1080
+         Low     1.0000    1.0000    1.0000       980
+      Medium     1.0000    1.0000    1.0000       980
+
+    accuracy                         1.0000      3040
+   macro avg     1.0000    1.0000    1.0000      3040
+weighted avg     1.0000    1.0000    1.0000      3040
+
+TEST CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.1635    0.2464    0.1966       280
+         Low     0.0893    0.0769    0.0826       260
+      Medium     0.0909    0.0538    0.0676       260
+
+    accuracy                         0.1288       800
+   macro avg     0.1146    0.1257    0.1156       800
+weighted avg     0.1158    0.1288    0.1176       800
+
+
+======================================================================
+MODEL: Logistic Regression
+======================================================================
+TRAINING CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.3708    0.6176    0.4634      1080
+         Low     0.3436    0.3184    0.3305       980
+      Medium     0.4204    0.1429    0.2133       980
+
+    accuracy                         0.3681      3040
+   macro avg     0.3783    0.3596    0.3357      3040
+weighted avg     0.3780    0.3681    0.3399      3040
+
+TEST CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+        High     0.3396    0.5143    0.4091       280
+         Low     0.3036    0.2615    0.2810       260
+      Medium     0.3421    0.2000    0.2524       260
+
+    accuracy                         0.3300       800
+   macro avg     0.3284    0.3253    0.3142       800
+weighted avg     0.3287    0.3300    0.3165       800

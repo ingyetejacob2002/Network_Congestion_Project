@@ -1,0 +1,27 @@
+STAGE 7: DATASET DISTRIBUTION AUDIT
+============================================================
+Training records: 3040
+Testing records: 800
+Features analysed: log_packet_count, log_byte_count, duration_total_sec
+
+DUPLICATE FEATURE AUDIT:
+Training: 919 unique feature vectors; 2121 repeated feature rows; 0 conflicting vectors.
+Testing: 221 unique feature vectors; 579 repeated feature rows; 0 conflicting vectors.
+
+Unique feature vectors shared between train and test: 0
+
+OVERALL TRAIN/TEST DISTRIBUTION:
+log_packet_count: train mean=1.871918, test mean=1.723627, KS=0.0401, p=0.252312
+log_byte_count: train mean=6.076056, test mean=5.718696, KS=0.0401, p=0.252312
+duration_total_sec: train mean=65.345588, test mean=64.315213, KS=0.1684, p=3.69594e-16
+
+CLASS DIFFERENCE TESTS:
+log_packet_count: Kruskal-Wallis p=0.184368
+log_byte_count: Kruskal-Wallis p=0.181347
+duration_total_sec: Kruskal-Wallis p=3.32942e-05
+
+INTERPRETATION NOTES:
+The Kolmogorov-Smirnov test compares empirical distributions. A small p-value indicates evidence of a difference, but does not by itself establish that the difference is practically important or that the model is invalid.
+The Kruskal-Wallis test checks whether distributions differ across classes. Statistical significance alone does not prove that a feature is useful for prediction.
+Repeated feature vectors can arise naturally from simulated traffic, counters, or rounded measurements. They should be interpreted in the context of how the data was generated.
+The congestion labels originate from source scenarios. Without independently measured congestion ground truth, classification results cannot establish real-world detection performance.

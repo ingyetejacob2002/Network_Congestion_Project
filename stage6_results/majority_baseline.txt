@@ -1,0 +1,5 @@
+MAJORITY-CLASS BASELINE
+=======================
+Most frequent training class: High
+Test accuracy: 0.3500
+Test macro-F1: 0.1728

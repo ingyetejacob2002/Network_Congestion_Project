@@ -1,0 +1,31 @@
+STAGE 8: VALIDATION STRATEGY AND FEATURE AUDIT
+=================================================================
+Rows evaluated: 3840
+Feature columns: ['packet_count', 'byte_count', 'duration_total_sec', 'log_packet_count', 'log_byte_count', 'packet_rate', 'byte_rate', 'bytes_per_packet']
+Class counts: {'High': np.int64(1360), 'Low': np.int64(1240), 'Medium': np.int64(1240)}
+Timestamp grouping used: timestamp
+Grouped validation: StratifiedGroupKFold by timestamp
+
+LABEL/TIMESTAMP AUDIT
+Timestamp column: timestamp
+                              min                       max  nunique
+_target                                                             
+High    2026-06-20 21:48:18+00:00 2026-06-20 21:50:33+00:00       68
+Low     2026-06-20 20:41:17+00:00 2026-06-20 20:43:22+00:00       62
+Medium  2026-06-20 20:57:40+00:00 2026-06-20 20:59:45+00:00       62
+Review timestamp_ranges_by_class.csv. If class time ranges do not overlap, class identity is confounded with collection period/scenario.
+
+VALIDATION COMPARISON (sorted by grouped macro-F1)
+              model                        validation  folds  accuracy_mean  accuracy_std  precision_macro_mean  precision_macro_std  recall_macro_mean  recall_macro_std  f1_macro_mean  f1_macro_std
+Logistic Regression StratifiedGroupKFold by timestamp      5       0.338090      0.026151              0.323546             0.053080           0.334347          0.023285       0.318439      0.043093
+                SVM StratifiedGroupKFold by timestamp      5       0.292112      0.033574              0.288186             0.031471           0.293861          0.032447       0.276611      0.025658
+      Decision Tree StratifiedGroupKFold by timestamp      5       0.335020      0.082231              0.485346             0.206258           0.330488          0.082811       0.241652      0.054319
+  Majority Baseline StratifiedGroupKFold by timestamp      5       0.354251      0.015882              0.118084             0.005294           0.333333          0.000000       0.174335      0.005796
+      Random Forest StratifiedGroupKFold by timestamp      5       0.165540      0.037236              0.174964             0.039531           0.166838          0.038344       0.162306      0.035147
+        Extra Trees StratifiedGroupKFold by timestamp      5       0.143333      0.021545              0.153015             0.021398           0.142057          0.021416       0.144023      0.020553
+                KNN StratifiedGroupKFold by timestamp      5       0.103246      0.022590              0.111242             0.018827           0.102494          0.022308       0.103886      0.019894
+
+INTERPRETATION
+Use timestamp-grouped validation as the more cautious estimate when repeated records come from the same timestamp. Row-wise CV can be optimistic if closely related records are spread across folds.
+A difference between row-wise and grouped scores indicates sensitivity to the validation strategy. Neither strategy proves real-world congestion detection because the target labels were assigned from source scenarios.
+Do not select a final model solely from accuracy. Review macro-F1, per-class reports, confusion matrices, timestamp ranges, and how the labels were created.

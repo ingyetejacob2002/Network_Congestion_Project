@@ -1,0 +1,3 @@
+split,records,unique_feature_vectors,repeated_feature_rows,unique_feature_and_label_rows,conflicting_feature_vectors,largest_feature_group
+Training,3040,919,2121,919,0,10
+Testing,800,221,579,221,0,10

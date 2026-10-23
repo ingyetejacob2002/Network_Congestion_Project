@@ -1,0 +1,32 @@
+STAGE 4: FEATURE ENGINEERING SUMMARY
+=======================================================
+Training records: 3,040
+Testing records: 800
+Number of engineered features: 3
+
+ENGINEERED FEATURES:
+- log_packet_count = log(1 + packet_count)
+- log_byte_count = log(1 + byte_count)
+- duration_total_sec = duration_sec + duration_nsec / 1e9
+
+SCALING:
+- StandardScaler was fitted using training data only.
+- The fitted scaler was applied to the testing data.
+- The target column was not scaled.
+
+TARGET CLASS MAPPING:
+- The original Stage 2 numeric class encoding is preserved.
+- Refer to prepared_data/class_mapping.csv for class names.
+
+IMPORTANT LIMITATION:
+The labels were assigned from separate traffic scenarios.
+Successful model performance will not by itself prove that
+the model generalises to independently observed network congestion.
+
+FILES:
+- engineered_train.csv
+- engineered_test.csv
+- scaled_train.csv
+- scaled_test.csv
+- feature_scaler.joblib
+- feature_names.csv

@@ -1,0 +1,12 @@
+Model: Decision Tree
+Validation: grouped
+
+              precision    recall  f1-score   support
+
+        High       0.35      0.52      0.41      1360
+         Low       0.35      0.41      0.38      1240
+      Medium       0.20      0.05      0.09      1240
+
+    accuracy                           0.33      3840
+   macro avg       0.30      0.33      0.29      3840
+weighted avg       0.30      0.33      0.30      3840

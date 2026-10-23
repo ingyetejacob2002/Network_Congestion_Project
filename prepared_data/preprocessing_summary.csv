@@ -1,0 +1,8 @@
+,value
+original_dataset_rows,3840
+rows_after_duplicate_removal,3840
+number_of_features,4
+training_records,3040
+testing_records,800
+unique_timestamps,192
+shared_train_test_timestamps,0

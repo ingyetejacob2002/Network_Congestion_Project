@@ -1,0 +1,7 @@
+split,class,count,percentage
+Training,High,1080,35.526315789473685
+Training,Low,980,32.23684210526316
+Training,Medium,980,32.23684210526316
+Testing,High,280,35.0
+Testing,Low,260,32.5
+Testing,Medium,260,32.5

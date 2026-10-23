@@ -1,0 +1,4 @@
+congestion_level,encoded_value
+High,0
+Low,1
+Medium,2

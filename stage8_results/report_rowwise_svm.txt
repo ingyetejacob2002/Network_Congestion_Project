@@ -1,0 +1,12 @@
+Model: SVM
+Validation: rowwise
+
+              precision    recall  f1-score   support
+
+        High       0.44      0.31      0.37      1360
+         Low       0.36      0.54      0.43      1240
+      Medium       0.38      0.31      0.34      1240
+
+    accuracy                           0.39      3840
+   macro avg       0.39      0.39      0.38      3840
+weighted avg       0.40      0.39      0.38      3840

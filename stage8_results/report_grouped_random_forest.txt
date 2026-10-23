@@ -1,0 +1,12 @@
+Model: Random Forest
+Validation: grouped
+
+              precision    recall  f1-score   support
+
+        High       0.23      0.17      0.20      1360
+         Low       0.16      0.17      0.17      1240
+      Medium       0.13      0.15      0.14      1240
+
+    accuracy                           0.17      3840
+   macro avg       0.17      0.17      0.17      3840
+weighted avg       0.17      0.17      0.17      3840

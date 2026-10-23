@@ -1,0 +1,34 @@
+STAGE 3: EXPLORATORY DATA ANALYSIS SUMMARY
+=======================================================
+Valid records analysed: 3,840
+Numeric features: packet_count, byte_count, duration_sec, duration_nsec
+
+CLASS DISTRIBUTION:
+- Low: 1,240 records (32.29%)
+- Medium: 1,240 records (32.29%)
+- High: 1,360 records (35.42%)
+
+MEAN FEATURE VALUES BY CLASS:
+- Low: packet_count=316.868, byte_count=464070.056, duration_sec=63.637, duration_nsec=614709677.419
+- Medium: packet_count=1664.329, byte_count=2471631.454, duration_sec=62.484, duration_nsec=583863709.677
+- High: packet_count=2413.441, byte_count=3587659.479, duration_sec=67.228, duration_nsec=585680882.353
+
+FEATURE CORRELATIONS:
+- packet_count vs byte_count: 1.000
+- packet_count vs duration_sec: 0.182
+- packet_count vs duration_nsec: -0.020
+- byte_count vs duration_sec: 0.181
+- byte_count vs duration_nsec: -0.020
+- duration_sec vs duration_nsec: 0.125
+
+OUTLIER COUNTS (IQR RULE):
+- packet_count: 904 values (23.54%) outside the 1.5*IQR limits
+- byte_count: 904 values (23.54%) outside the 1.5*IQR limits
+- duration_sec: 0 values (0.00%) outside the 1.5*IQR limits
+- duration_nsec: 0 values (0.00%) outside the 1.5*IQR limits
+
+INTERPRETATION CAUTION:
+The congestion labels were assigned from scenario filenames. Differences between classes may therefore reflect the original scenario setup rather than independently measured congestion.
+High correlations and outliers should be investigated before training. Correlation does not establish causation.
+Do not use timestamps or scenario identifiers as predictive features merely because they correlate with the target.
+A high model score alone will not establish real-world generalisation; later evaluation should use a defensible split and independent congestion ground truth where possible.

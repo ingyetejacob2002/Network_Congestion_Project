@@ -1,0 +1,29 @@
+STAGE 6: DIAGNOSTIC ANALYSIS SUMMARY
+============================================================
+Training records: 3040
+Testing records: 800
+Features: log_packet_count, log_byte_count, duration_total_sec
+
+MAJORITY-CLASS BASELINE:
+Test accuracy: 0.3500
+Test macro-F1: 0.1728
+
+IDENTICAL FEATURE COMBINATIONS:
+Unique combinations: 919
+Conflicting-label combinations: 0
+Repeated complete rows: 2121
+
+TRAIN/TEST PERFORMANCE:
+Decision Tree: train accuracy=0.4306, test accuracy=0.3800, train macro-F1=0.3293, test macro-F1=0.2431
+Random Forest: train accuracy=0.9993, test accuracy=0.1600, train macro-F1=0.9993, test macro-F1=0.1477
+Support Vector Machine: train accuracy=0.3993, test accuracy=0.3287, train macro-F1=0.3888, test macro-F1=0.3278
+K-Nearest Neighbors: train accuracy=1.0000, test accuracy=0.1288, train macro-F1=1.0000, test macro-F1=0.1156
+Logistic Regression: train accuracy=0.3681, test accuracy=0.3300, train macro-F1=0.3357, test macro-F1=0.3142
+
+INTERPRETATION:
+A large training-to-testing performance gap may indicate overfitting or differences between the training and test data.
+Low performance on both sets suggests the current features may not adequately distinguish the assigned classes.
+Conflicting identical feature combinations indicate that the current feature set alone cannot uniquely determine the label for those observations.
+
+RESEARCH LIMITATION:
+The labels were assigned from scenario filenames rather than independently measured congestion ground truth. Results therefore evaluate prediction of these assigned labels and do not, by themselves, validate real-world congestion detection.

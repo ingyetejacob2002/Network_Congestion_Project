@@ -1,0 +1,5 @@
+feature,q1,q3,iqr,lower_bound,upper_bound,outlier_count,outlier_percentage
+packet_count,2.0,2.0,0.0,2.0,2.0,904,23.541666666666668
+byte_count,196.0,196.0,0.0,196.0,196.0,904,23.541666666666668
+duration_sec,32.75,97.0,64.25,-63.625,193.375,0,0.0
+duration_nsec,412250000.0,809500000.0,397250000.0,-183625000.0,1405375000.0,0,0.0
